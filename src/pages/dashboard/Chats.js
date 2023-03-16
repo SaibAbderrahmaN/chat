@@ -90,14 +90,14 @@ const Chats = () => {
             <SimpleBarStyle timeout={500} clickOnTrack={false}>
               <Stack spacing={2.4}>
                 <Typography variant="subtitle2" sx={{ color: "#676667" }}>
-                  Pinned
+                 admins
                 </Typography>
                 {/* Chat List */}
                 {ChatList.filter((el) => el.pinned).map((el, idx) => {
                   return <ChatElement {...el} />;
                 })}
                 <Typography variant="subtitle2" sx={{ color: "#676667" }}>
-                  All Chats
+                  drivers
                 </Typography>
                 {/* Chat List */}
                 {ChatList.filter((el) => !el.pinned).map((el, idx) => {

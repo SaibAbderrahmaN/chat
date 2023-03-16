@@ -15,7 +15,7 @@ const GeneralApp = () => {
  
 
  <Chats />
- <Box sx={{height:"100%",width:"90%"}}>
+ <Box sx={{height:"100%",width:"90%"  }}>
 
  <Conversation />
  </Box>

@@ -66,9 +66,8 @@ const SideBar = () => {
         <Box
           sx={{
             height: 64,
-            width: 90,
+            width: 80,
             borderRadius: 1.5,
-            backgroundColor: theme.palette.primary.main,
           }}
           pt={3}
         >
