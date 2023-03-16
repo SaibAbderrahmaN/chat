@@ -1,22 +1,15 @@
 import React from "react";
-import {
-  Avatar,
-  Badge,
-  Box,
-  Divider,
-  Fade,
-  IconButton,
-  Menu,
-  MenuItem,
-  Stack,
-  styled,
-  Typography,
+import { Avatar, Badge, Box, Divider, Fade, IconButton, Menu, MenuItem, Stack, styled, Typography,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { CaretDown, MagnifyingGlass, Phone, VideoCamera } from "phosphor-react";
 import { faker } from "@faker-js/faker";
 import { useSearchParams } from "react-router-dom";
 import useResponsive from "../../hooks/useResponsive";
+import { useDispatch, useSelector } from "react-redux";
+import { ToggleSidebar } from "../../redux/slices/app";
+
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -66,6 +59,10 @@ const ChatHeader = () => {
   const isMobile = useResponsive("between", "md", "xs", "sm");
   const [searchParams, setSearchParams] = useSearchParams();
   const theme = useTheme();
+  const dispatch = useDispatch();
+  const state = useSelector(state=>console.log(state))
+
+  
 
   const [conversationMenuAnchorEl, setConversationMenuAnchorEl] =
     React.useState(null);
@@ -94,10 +91,9 @@ const ChatHeader = () => {
         justifyContent="space-between"
       >
         <Stack
-          onClick={() => {
-            searchParams.set("open", true);
-            setSearchParams(searchParams);
-          }}
+         onClick={() => {
+          dispatch(ToggleSidebar());
+        }}
           spacing={2}
           direction="row"
         >

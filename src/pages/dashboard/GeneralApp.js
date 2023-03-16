@@ -3,9 +3,13 @@ import React,{Suspense,lazy} from "react";
 import { Stack } from "phosphor-react";
 import  Conversation  from "./Conversation";
 import { Box } from "@mui/system";
+import Contact from "../../components/Contact";
+import { useSelector } from "react-redux";
 
 const Cat =lazy(()=>import("../../components/Cat"))
 const GeneralApp = () => {
+  const { sideBar } = useSelector((state) => state.app);
+
 
   return (
 
@@ -19,6 +23,26 @@ const GeneralApp = () => {
 
  <Conversation />
  </Box>
+
+ {/* contact  */}
+ {sideBar.open &&
+          (() => {
+            switch (sideBar.type) {
+              case "CONTACT":
+                return <Contact />;
+
+              case "STARRED":
+                return <StarredMessages />;
+
+              case "SHARED":
+                return <Media />;
+
+              default:
+                break;
+            }
+          })()}
+      
+
 
 
 
