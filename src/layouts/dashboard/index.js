@@ -28,7 +28,6 @@ const DashboardLayout = () => {
 
   const handleChangeTab = (index) => {
     setSelectedTab(index);
-    navigate(getPath(index));
   };
 
 

@@ -108,9 +108,7 @@ const Chats = () => {
           </Stack>
         </Stack>
       </Box>
-      {openDialog && (
-        <Friends open={openDialog} handleClose={handleCloseDialog} />
-      )}
+   
     </>
   );
 };

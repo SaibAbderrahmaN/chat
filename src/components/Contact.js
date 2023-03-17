@@ -5,8 +5,13 @@ import useResponsive from "../hooks/useResponsive";
 import AntSwitch from "../components/AntSwitch";
 import { useDispatch } from "react-redux";
 import { ToggleSidebar, UpdateSidebarType } from "../redux/slices/app";
+import { useTheme } from "@mui/material/styles";
+import React, { useState } from "react";
 
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 const BlockDialog = ({ open, handleClose }) => {
   return (
     <Dialog
