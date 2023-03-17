@@ -5,6 +5,9 @@ import  Conversation  from "./Conversation";
 import { Box } from "@mui/system";
 import Contact from "../../components/Contact";
 import { useSelector } from "react-redux";
+import StarredMessages from "../../sections/Dashboard/StarredMessages";
+import Media from "../../sections/Dashboard/SharedMessages";
+
 
 const Cat =lazy(()=>import("../../components/Cat"))
 const GeneralApp = () => {
@@ -30,6 +33,13 @@ const GeneralApp = () => {
             switch (sideBar.type) {
               case "CONTACT":
                 return <Contact />;
+
+              case "STARRED":
+                return <StarredMessages />;
+
+              case "SHARED":
+                return <Media />;
+
               default:
                 break;
             }
