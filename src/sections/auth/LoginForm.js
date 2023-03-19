@@ -29,8 +29,8 @@ export default function AuthLoginForm() {
   });
 
   const defaultValues = {
-    email: "demo@tawk.com",
-    password: "demo1234",
+    email: "contact@wegofleet.com",
+    password: "abderrahman",
   };
 
   const methods = useForm({

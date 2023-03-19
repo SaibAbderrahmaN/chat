@@ -2,6 +2,7 @@
 import Router from "./routes";
 // theme
 import ThemeProvider from './theme';
+import './style.css'
 // components
 import ThemeSettings from './components/settings';
 
