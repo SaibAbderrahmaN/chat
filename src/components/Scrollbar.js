@@ -27,12 +27,15 @@ const SimpleBarStyle = styled(SimpleBarReact)(({ theme }) => ({
   },
   '& .simplebar-track.simplebar-horizontal .simplebar-scrollbar': {
     height: 6,
+    width:3
   },
   '& .simplebar-mask': {
     zIndex: 'inherit',
   },
   "& .simplebar-placeholder": {
     height: '0 !important',
+    width:3
+
   }
 }));
 

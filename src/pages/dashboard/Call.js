@@ -11,7 +11,7 @@ import { useTheme } from "@mui/material/styles";
 import { SimpleBarStyle } from "../../components/Scrollbar";
 import {CallLogElement} from "../../components/CallElement";
 import { CallList } from "../../data";
-import StartCall from "../../sections/dashboard/StartCall";
+import StartCall from "../../sections/Dashboard/StartCall";
 
 const Call = () => {
   const [openDialog, setOpenDialog] = useState(false);
